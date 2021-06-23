@@ -11,7 +11,8 @@ So I can learn Godot without following a tutorial. And have fun.
 
 ## Uses
 * Godot
-* Godoxel for art
+* Godoxel plugin for art
 * Slackey font
-
+* Online Sequencer for Music:
+  * https://onlinesequencer.net/2135504
 
