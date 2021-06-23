@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://menu/Slackey-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://enemy/enemy.png" type="Texture" id=2]
 [ext_resource path="res://menu/Menu.gd" type="Script" id=3]
+[ext_resource path="res://menu/click.wav" type="AudioStream" id=4]
+[ext_resource path="res://menu/Menu.ogg" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -68,9 +70,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="enemy" type="Sprite" parent="."]
+[node name="Enemy" type="Sprite" parent="."]
 position = Vector2( 888, 272 )
 texture = ExtResource( 2 )
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
